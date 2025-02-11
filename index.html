@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yearbook - Nhóm 4</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Thêm thư viện AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <!-- Header -->
-    <header>
+    <header data-aos="fade-down">
         <div class="container">
             <h1>Nhóm 4 - Kỷ Yếu</h1>
             <p class="tagline">"Những khoảnh khắc quý giá bên nhau"</p>
@@ -17,39 +20,40 @@
     </header>
 
     <!-- Homepage (Intro) -->
-    <section id="intro">
+    <section id="intro" data-aos="fade-in">
         <div class="container">
             <h2>Chào mừng đến với Kỷ Yếu Nhóm 4</h2>
-            <p>Chúng tôi là một nhóm gồm 5 thành viên, đã cùng nhau trải qua những khoảnh khắc đẹp và đầy kỷ niệm. Hãy cùng khám phá những trang kỷ yếu của chúng tôi!</p>
+            <p>Chúng tôi là một nhóm gồm 5 thành viên, đã cùng nhau trải qua những khoảnh khắc đẹp và đầy kỷ niệm. Hãy
+                cùng khám phá những trang kỷ yếu của chúng tôi!</p>
             <img src="anhtapthe.jpg" alt="Nhóm 5 Người" class="group-photo">
         </div>
     </section>
 
     <!-- Members Section -->
-    <section id="members">
+    <section id="members" data-aos="fade-up">
         <div class="container">
             <h2>Hồ Sơ Thành Viên</h2>
-            <div class="member">
+            <div class="member" data-aos="zoom-in">
                 <img src="mem1.png" alt="Thành viên 1">
                 <h3>Nguyễn Văn Khuê</h3>
                 <p>Leader, Lập trình viên chính, Full-stack Developer</p>
             </div>
-            <div class="member">
+            <div class="member" data-aos="zoom-in">
                 <img src="mem2.jpg" alt="Thành viên 2">
                 <h3>Nguyễn Mai Chi</h3>
                 <p>Front-end Developer, Thuyết trình viên</p>
             </div>
-            <div class="member">
+            <div class="member" data-aos="zoom-in">
                 <img src="mem3.jpg" alt="Thành viên 3">
                 <h3>Lê Trung Phong</h3>
                 <p>Front-end Developer, Thuyết trình viên</p>
             </div>
-            <div class="member">
+            <div class="member" data-aos="zoom-in">
                 <img src="mem4.jpg" alt="Thành viên 4">
                 <h3>Dương Anh Tuấn</h3>
                 <p>Back-end Developer, Thuyết trình viên</p>
             </div>
-            <div class="member">
+            <div class="member" data-aos="zoom-in">
                 <img src="mem5.jpg" alt="Thành viên 5">
                 <h3>Nhâm Đỗ Thái Hà</h3>
                 <p>Content Writer, Thuyết trình viên</p>
@@ -58,37 +62,39 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery">
+    <section id="gallery" data-aos="fade-up">
         <div class="container">
             <h2>Album Ảnh Kỷ Yếu</h2>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left">
                 <img src="ky1.jpg" alt="Ảnh Kỷ Yếu 1">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left">
                 <img src="ky2.jpg" alt="Ảnh Kỷ Yếu 2">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left">
                 <img src="ky3.jpg" alt="Ảnh Kỷ Yếu 3">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left">
                 <img src="ky4.jpg" alt="Ảnh Kỷ Yếu 4">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-aos="fade-left">
                 <img src="ky5.jpg" alt="Ảnh Kỷ Yếu 5">
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials">
+    <section id="testimonials" data-aos="fade-up">
         <div class="container">
             <h2>Cảm Nhận Của Thành Viên</h2>
-            <div class="testimonial">
-                <p>"Nhóm chúng tôi đã cùng nhau trải qua rất nhiều kỷ niệm đáng nhớ, từ những buổi học tập đến những chuyến đi chơi đầy ắp tiếng cười."</p>
+            <div class="testimonial" data-aos="flip-left">
+                <p>"Nhóm chúng tôi đã cùng nhau trải qua rất nhiều kỷ niệm đáng nhớ, từ những buổi học tập đến những
+                    chuyến đi chơi đầy ắp tiếng cười."</p>
                 <cite>- Nguyễn Mai Chi -</cite>
             </div>
-            <div class="testimonial">
-                <p>"Chắc chắn rằng đây là những năm tháng tôi sẽ không bao giờ quên. Cảm ơn các bạn đã đồng hành cùng tôi trong suốt hành trình này."</p>
+            <div class="testimonial" data-aos="flip-left">
+                <p>"Chắc chắn rằng đây là những năm tháng tôi sẽ không bao giờ quên. Cảm ơn các bạn đã đồng hành cùng
+                    tôi trong suốt hành trình này."</p>
                 <cite>- Lê Trung Phong -</cite>
             </div>
         </div>
@@ -100,6 +106,15 @@
             <p>&copy; 2025 Nhóm 4. Tất cả quyền lợi được bảo lưu.</p>
         </div>
     </footer>
-
+    <!-- Thêm thư viện AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Thời gian hiệu ứng
+            easing: 'ease-in-out', // Hiệu ứng easing
+            once: true, // Hiệu ứng chỉ chạy một lần khi cuộn đến phần tử
+        });
+    </script>
 </body>
+
 </html>

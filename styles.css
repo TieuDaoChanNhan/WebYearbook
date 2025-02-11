@@ -32,6 +32,8 @@ header {
     background-color: #333;
     color: white;
     padding: 20px 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
 header .tagline {
@@ -56,6 +58,8 @@ header .tagline {
 #members {
     background-color: #ffffff;
     padding: 50px 0;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
 }
 
 .member {
@@ -63,6 +67,7 @@ header .tagline {
     width: 18%;
     margin: 0 2%;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .member img {
@@ -71,6 +76,12 @@ header .tagline {
     object-fit: cover;
     border-radius: 50%; /* Tròn */
     margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .member h3 {
@@ -85,6 +96,8 @@ header .tagline {
 #gallery {
     padding: 50px 0;
     text-align: center;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
 }
 
 .gallery-item {
@@ -95,15 +108,22 @@ header .tagline {
 
 .gallery-item img {
     width: 400px;
-    height: 600px; /* Cố định chiều cao */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    height: 600px;
+    object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Testimonials Section */
 #testimonials {
     background-color: #f9f9f9;
     padding: 50px 0;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
 }
 
 .testimonial {
@@ -124,4 +144,54 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member {
+        width: 45%;
+        margin: 0 2.5%;
+    }
+
+    .gallery-item {
+        width: 45%;
+        margin: 0 2.5%;
+    }
+
+    #intro .group-photo {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .member {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .gallery-item {
+        width: 90%;
+        margin: 10px auto;
+    }
 }

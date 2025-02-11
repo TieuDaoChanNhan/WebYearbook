@@ -1,0 +1,127 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header .tagline {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Homepage (Intro) */
+#intro {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#intro .group-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Members Section */
+#members {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.member {
+    display: inline-block;
+    width: 18%;
+    margin: 0 2%;
+    text-align: center;
+}
+
+.member img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Tròn */
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    margin-top: 10px;
+}
+
+.member p {
+    font-style: italic;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 22%;
+    margin: 0 2%;
+}
+
+.gallery-item img {
+    width: 400px;
+    height: 600px; /* Cố định chiều cao */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 10px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

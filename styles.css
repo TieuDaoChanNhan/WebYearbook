@@ -10,7 +10,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    background: linear-gradient(to top, #87cefa, #fff); /* Màu nền bầu trời xanh */
+    background: linear-gradient(to top, #87cefa, #fff);
+    /* Màu nền bầu trời xanh */
     position: relative;
     overflow-x: hidden;
 }
@@ -21,42 +22,20 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
-    /* background-image: url('sunbeam.png'); */
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+    position: relative; /* Ensures text is properly positioned inside */
 }
 
-header .tagline {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Homepage (Intro) */
-#intro {
-    height: 80vh; /* Makes the intro section as tall as the viewport */
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    flex-direction: column; /* Align children vertically */
-    text-align: center;
-    background-image: url('anhtapthe.jpg'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-}
-
-#intro h2 {
+header .intro-heading {
     color: white; /* Make text white for contrast */
-    margin: 10px 0; /* Add some space between the text elements */
-    padding: 10px 20px; /* Add padding around the text */
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background (50% opacity) */
-    animation: fadeInUp 2s ease-out; /* Add the animation */
+    font-size: 2em; /* Adjust text size */
+    font-weight: 500; /* Lighter font weight (slimmer) */
+    font-family: 'Times New Roman', serif;
+    font-stretch: condensed; /* Optional: makes text narrower */
+    z-index: 2; /* Ensure it stays above the background */
+    animation: fadeInUp 2s ease-out; /* Animation */
 }
 
-/* Animation for fade-in and slide-up effect */
+/* Fade-In Up Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -68,18 +47,36 @@ header .tagline {
     }
 }
 
+/* Homepage (Intro) */
+#intro {
+    height: 80vh;
+    /* Makes the intro section as tall as the viewport */
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Horizontally center content */
+    align-items: center;
+    /* Vertically center content */
+    flex-direction: column;
+    /* Align children vertically */
+    text-align: center;
+    background-image: url('anhtapthe.jpg');
+    /* Set the background image */
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-position: center center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    position: relative;
+    /* Position for overlay */
+}
+
 #intro .group-photo {
     width: 100%;
     max-width: 800px;
     height: auto;
     margin-top: 20px;
-}
-
-#intro h2 {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    /* color: #2a76d3; */
 }
 
 /* Members Section */
@@ -102,7 +99,8 @@ header .tagline {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border-radius: 50%; /* Tròn */
+    border-radius: 50%;
+    /* Tròn */
     margin-bottom: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -141,7 +139,8 @@ header .tagline {
     display: inline-block;
     width: 22%;
     margin: 0 2%;
-    margin-bottom: 30px; /* Tạo khoảng cách giữa các dòng */
+    margin-bottom: 30px;
+    /* Tạo khoảng cách giữa các dòng */
     transition: transform 0.3s ease;
 }
 
@@ -163,6 +162,48 @@ header .tagline {
     margin-bottom: 30px;
     font-size: 2em;
     font-weight: bold;
+}
+
+/* Modal (Popup) Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top of the page */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Testimonials Section */
@@ -196,7 +237,8 @@ header .tagline {
 
 /* Footer */
 footer {
-    background-color: #2a76d3; /* Xanh đậm giống header */
+    background-color: #2a76d3;
+    /* Xanh đậm giống header */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -207,6 +249,7 @@ footer {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -217,6 +260,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

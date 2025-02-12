@@ -15,19 +15,20 @@
     <!-- Header -->
     <header data-aos="fade-down">
         <div class="container">
-            <h1>Nhóm 4 - Kỷ Yếu</h1>
-            <p class="tagline">"Những khoảnh khắc quý giá bên nhau"</p>
+            <h2 data-aos="fade-up" class="intro-heading">Chào mừng đến với kỷ yếu nhóm 4</h2>
+            <!-- <p class="tagline">"Những khoảnh khắc quý giá bên nhau"</p> -->
         </div>
     </header>
 
+    <hr>
+
     <!-- Homepage (Intro) -->
     <section id="intro">
-        <div class="container">
-            <h2 data-aos="fade-up">Chào mừng đến với Kỷ Yếu Nhóm 4</h2>
-            <!-- <p data-aos="fade-up">Chúng tôi là một nhóm gồm 5 thành viên, đã cùng nhau trải qua những khoảnh khắc đẹp và đầy kỷ niệm. Hãy cùng khám phá những trang kỷ yếu của chúng tôi!</p> -->
+        <div class="intro-overlay">
+            <!-- <h2 data-aos="fade-up">Chào mừng đến với Kỷ Yếu Nhóm 4</h2> -->
         </div>
     </section>
-    
+
 
     <!-- Members Section -->
     <section id="members" data-aos="fade-up">
@@ -65,23 +66,30 @@
     <section id="gallery" data-aos="fade-up">
         <div class="container">
             <h2>Album Ảnh Kỷ Yếu</h2>
-            <div class="gallery-item" data-aos="fade-left">
+            <div class="gallery-item" data-aos="fade-left" onclick="openModal('ky1.jpg')">
                 <img src="ky1.jpg" alt="Ảnh Kỷ Yếu 1">
             </div>
-            <div class="gallery-item" data-aos="fade-left">
+            <div class="gallery-item" data-aos="fade-left" onclick="openModal('ky2.jpg')">
                 <img src="ky2.jpg" alt="Ảnh Kỷ Yếu 2">
             </div>
-            <div class="gallery-item" data-aos="fade-left">
+            <div class="gallery-item" data-aos="fade-left" onclick="openModal('ky3.jpg')">
                 <img src="ky3.jpg" alt="Ảnh Kỷ Yếu 3">
             </div>
-            <div class="gallery-item" data-aos="fade-left">
+            <div class="gallery-item" data-aos="fade-left" onclick="openModal('ky4.jpg')">
                 <img src="ky4.jpg" alt="Ảnh Kỷ Yếu 4">
             </div>
-            <div class="gallery-item" data-aos="fade-left">
+            <div class="gallery-item" data-aos="fade-left" onclick="openModal('ky5.jpg')">
                 <img src="ky5.jpg" alt="Ảnh Kỷ Yếu 5">
             </div>
         </div>
     </section>
+
+    <!-- Modal for Image Popup -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" src="">
+    </div>
+
 
     <!-- Testimonials Section -->
     <section id="testimonials" data-aos="fade-up">
@@ -103,7 +111,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Nhóm 4. Tất cả quyền lợi được bảo lưu.</p>
+            <p>&copy; 2025 Yearbook | All Rights Reserved</p>
         </div>
     </footer>
 
@@ -115,6 +123,21 @@
             easing: 'ease-in-out',
             once: true,
         });
+    </script>
+    <script>
+        // Function to open the modal with the clicked image
+        function openModal(imageSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+        }
+
+        // Function to close the modal when clicked outside the image
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
     </script>
 </body>
 

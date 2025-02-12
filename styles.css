@@ -36,8 +36,36 @@ header .tagline {
 
 /* Homepage (Intro) */
 #intro {
-    padding: 50px 0;
+    height: 80vh; /* Makes the intro section as tall as the viewport */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    flex-direction: column; /* Align children vertically */
     text-align: center;
+    background-image: url('anhtapthe.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+#intro h2 {
+    color: white; /* Make text white for contrast */
+    margin: 10px 0; /* Add some space between the text elements */
+    padding: 10px 20px; /* Add padding around the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background (50% opacity) */
+    animation: fadeInUp 2s ease-out; /* Add the animation */
+}
+
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Start from 30px below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
 }
 
 #intro .group-photo {
